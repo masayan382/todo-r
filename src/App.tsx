@@ -6,7 +6,8 @@ import AddToPhotosIcon from "@material-ui/icons/AddToPhotos"
 import TaskItem from "./TaskItem"
 import { makeStyles } from "@material-ui/styles"
 import { auth } from "./firebase"
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import Header from './Header'
+import Footer from './Footer'
 
 const useStyles = makeStyles({
   field: {
@@ -47,19 +48,7 @@ const App: React.FC = (props: any) => {
 
   return (
     <div className={styles.app__root }>
-      <h1>Todo App by React/Firebase</h1>
-      <button 
-        className={styles.app__logout}
-        onClick={async () => {
-            try {
-              await auth.signOut();
-              props.history.push("login");
-            } catch (error) {
-              alert(error.message);
-            }
-        }
-        }> <ExitToAppIcon /></button>
-      <br />
+      <Header />
       <FormControl>
         <TextField
           className={classes.field}
@@ -75,11 +64,13 @@ const App: React.FC = (props: any) => {
       <button className={styles.app__icon } disabled={!input} onClick={newTask}>
         <AddToPhotosIcon />
       </button>
+      <hr></hr>
       <List className={classes.list}>
       {tasks.map((task) => (
         <TaskItem key={task.id} id={task.id} title={task.title}/>
       ))}
       </List>
+      <Footer />
     </div>
   );
 };

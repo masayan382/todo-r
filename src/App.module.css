@@ -1,7 +1,7 @@
 .app__root {
 	text-align: center;
 	color: dimgray;
-	font-family: serif;
+	min-height: 500px;
 }
 .app__icon {
 	cursor: pointer;
@@ -16,8 +16,9 @@
 	background-color: transparent;
 	border: none;
 	outline: none;
-	color: dimgray;
-	margin-left: 10px;
+	color: #fff;
+	margin-left: 50px;
+	vertical-align: middle;
 }
 button:disabled {
 	color: #ccc;
@@ -25,4 +26,19 @@ button:disabled {
 }
 h1 {
 	display: inline-block;
+}
+
+.toolbar {
+	display: flex;
+	justify-content: center;
+	vertical-align: middle;
+	padding: 20px 0;
+}
+
+.footer {
+	background-color: #3f51b5;
+	color: #fff;
+	padding: 5px 0px;
+	margin: 0;
+	font-size: 14px;
 }
