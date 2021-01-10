@@ -6,3 +6,8 @@
 	margin-left: 2px;
 	color: dimgray;
 }
+
+.title {
+	width: 100%;
+	word-wrap: normal;
+}

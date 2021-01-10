@@ -48,14 +48,14 @@ const Login: React.FC = (props: any) => {
             await auth.signInWithEmailAndPassword(email, password);
             props.histroy.push("/")
           } catch (error) {
-            alert(error.message)
+            // alert(error.message)
           }
         } : async () => {
           try {
             await auth.createUserWithEmailAndPassword(email, password);
             props.history.push("/")
           } catch (error) {
-            alert(error.message);
+            // alert(error.message);
           }
         }
       }>

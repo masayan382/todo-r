@@ -24,7 +24,7 @@ const TaskItem: React.FC<PROPS> = (props) => {
   return (
     
     <ListItem>
-      <h2>{props.title}</h2>
+      <h2 className={styles.title}>{props.title}</h2>
       <Grid container justify="flex-end">
         <TextField
           InputLabelProps={{
