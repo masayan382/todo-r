@@ -4,14 +4,16 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { HashRouter, Switch, Route, BrowserRouter } from "react-router-dom";
 import Login from "./Login";
 
 ReactDOM.render(
-    <Switch>
-        <Route exact path='/' component={App} />
-        <Route exact path='/login' component={Login} />
-    </Switch>,
+    <HashRouter>
+        <Switch>
+            <Route exact path='/' component={App} />
+            <Route exact path='/login' component={Login} />
+        </Switch>
+    </HashRouter>,
     document.getElementById("root")
 );
 
