@@ -1,5 +1,6 @@
 {
-  "name": "todo-r",
+  "name": "todo-rt",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
